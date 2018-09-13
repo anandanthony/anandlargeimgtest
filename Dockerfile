@@ -45,7 +45,7 @@ RUN mkdir -p /home/LogFiles \
 
 COPY sshd_config /etc/ssh/
 RUN mkdir -p /opt/startup
-RUN -o /home/site/wwwroot/test.zip https://anandbatchtest.blob.core.windows.net/test/LargeImageTBI.zip
+RUN CURL -o /home/site/wwwroot/test.zip https://anandbatchtest.blob.core.windows.net/test/LargeImageTBI.zip
 COPY init_container.sh /opt/startup/init_container.sh
 
 
